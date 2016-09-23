@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Courses</title>
+		<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+	</head>
+	<body>
+		<h3>Are you sure you want to delete the following course?</h3>
+		<p>Name: {{course['title']}}</p>
+		<p>Description: {{course['description']}}</p>
+		<button><a href='/'>No</a></button>	
+		<form action='/courses/delete/{{course["id"]}}' method='post'>
+			<button>Yes! I want to delete this</button>
+		</form>
+	</body>
+</html>
